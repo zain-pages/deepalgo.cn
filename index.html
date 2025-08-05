@@ -307,6 +307,99 @@
             line-height: 1.8;
         }
         
+        /* 产品区域 */
+        .products {
+            padding: 8rem 0;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .product-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 212, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #00d4ff, #7c3aed);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+        }
+        
+        .product-icon {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .product-card h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0f172a;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .product-card p {
+            color: #64748b;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        
+        .feature-tag {
+            background: rgba(0, 212, 255, 0.1);
+            color: #0369a1;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .product-link {
+            display: block;
+            text-align: center;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-link:hover {
+            color: #7c3aed;
+            transform: translateX(5px);
+        }
+        
         /* 服务区域 */
         .services {
             padding: 8rem 0;
@@ -571,6 +664,10 @@
             .footer-links {
                 flex-wrap: wrap;
             }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -583,6 +680,7 @@
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于我们</a></li>
                 <li><a href="#services">服务</a></li>
+                <li><a href="#products">产品</a></li>
                 <li><a href="#contact">联系我们</a></li>
             </ul>
         </div>
@@ -600,7 +698,7 @@
             <p class="subtitle">专业软件开发与技术服务</p>
             <p class="description">专注于软件开发、技术服务和人工智能基础软件开发，为企业数字化转型提供创新的技术解决方案。</p>
             <div class="cta-buttons">
-                <a href="#services" class="btn btn-primary">了解服务</a>
+                <a href="#products" class="btn btn-primary">查看产品</a>
                 <a href="#contact" class="btn btn-secondary">联系我们</a>
             </div>
         </div>
@@ -627,6 +725,28 @@
                     <div class="icon">🤖</div>
                     <h3>智能化创新</h3>
                     <p>专注于人工智能基础软件开发和可穿戴智能设备，推动传统行业向智能化方向发展。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品 -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">我们的产品</h2>
+            <p class="section-subtitle">创新的软件产品，为您的业务提供强大支撑</p>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-icon">📱</div>
+                    <h3>移动存储同步系统</h3>
+                    <p>专业的移动设备存储同步解决方案，实现跨平台数据无缝同步，保障数据安全与高效传输。</p>
+                    <div class="product-features">
+                        <span class="feature-tag">跨平台同步</span>
+                        <span class="feature-tag">实时备份</span>
+                        <span class="feature-tag">数据加密</span>
+                    </div>
+                    <a href="./mobile_sync_landing.html" class="product-link">了解详情 →</a>
                 </div>
             </div>
         </div>
@@ -705,6 +825,7 @@
             <div class="footer-links">
                 <a href="#about">关于我们</a>
                 <a href="#services">服务</a>
+                <a href="#products">产品</a>
                 <a href="#contact">联系我们</a>
                 <a href="#">隐私政策</a>
                 <a href="#">服务条款</a>

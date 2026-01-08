@@ -1,16 +1,191 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContactSection from '../components/ContactSection.astro';
+import { Monitor, Brain, Smartphone, Eye, ArrowRight, Code } from 'lucide-astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="长沙深算科技有限公司 - 定制化技术开发与 IP 授权服务">
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="min-h-[85vh] flex flex-col justify-center relative overflow-hidden bg-paper">
+    <div class="absolute inset-0 pattern-grid opacity-50 pointer-events-none"></div>
+    
+    <!-- Decorative scribbles -->
+    <div class="absolute top-20 right-[10%] w-32 h-32 border-[3px] border-pencil-black rounded-full opacity-10 blur-sm rotate-12 hidden md:block"></div>
+    <div class="absolute bottom-20 left-[5%] w-24 h-24 bg-marker-red/5 rounded-full blur-xl hidden md:block"></div>
+
+    <div class="container-custom relative z-10 py-24 md:py-32">
+      <div class="mb-12 border-l-[6px] border-pencil-black pl-8 ml-4 rotate-1">
+        <h1 class="text-6xl md:text-8xl lg:text-9xl font-display font-bold leading-[0.9] text-pencil-black mb-6 drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+          深算<br/>科技
+        </h1>
+      </div>
+      
+      <div class="bg-white/80 backdrop-blur-sm p-6 border-2 border-pencil-black rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-sketch max-w-2xl mb-12 -rotate-1 hover:rotate-0 transition-transform duration-300">
+        <p class="font-body text-xl md:text-2xl text-pencil-black leading-relaxed">
+          承接定制化科研项目，针对特定需求进行技术攻关；<br class="hidden md:block"/>
+          以知识产权为核心，提供从技术授权到定制开发的全链条服务。
+        </p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-6 pl-4">
+        <a href="#products" class="btn-primary group rotate-1">
+          查看产品 <ArrowRight class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1 stroke-[3]" />
+        </a>
+        <a href="#contact" class="btn-secondary -rotate-1">
+          联系我们
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 relative">
+    <div class="container-custom">
+      <div class="text-center mb-16">
+        <h2 class="section-title inline-block bg-sticky-yellow px-4 py-1 shadow-sketch-sm rotate-1">关于深算</h2>
+        <p class="section-subtitle mx-auto mt-8">成立于 2025 年，致力于成为专业的软件开发和技术服务提供商。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d]">
+          <Code class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+          <h3 class="text-3xl font-display font-bold mb-4">软件开发</h3>
+          <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+            专业的软件开发团队，具备丰富的 Web 应用、移动应用和桌面应用开发经验，为客户提供高质量的软件产品。
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1] md:mt-12">
+          <Monitor class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+          <h3 class="text-3xl font-display font-bold mb-4">技术服务</h3>
+          <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+            提供全方位的技术服务，包括技术咨询、技术开发、技术转让等，帮助企业解决技术难题。
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d]">
+          <Brain class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+          <h3 class="text-3xl font-display font-bold mb-4">智能化创新</h3>
+          <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+            专注于人工智能基础软件开发和可穿戴智能设备，推动传统行业向智能化方向发展。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-32 relative">
+    <div class="absolute inset-0 pattern-lines opacity-10 pointer-events-none"></div>
+    
+    <div class="container-custom relative z-10">
+      <div class="mb-16">
+        <h2 class="section-title border-l-[6px] border-marker-red pl-4 ml-2">核心产品</h2>
+        <p class="section-subtitle">创新的软件产品，为您的业务提供强大支撑。</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Product 1 -->
+        <div class="card bg-white group hover:rotate-1 p-0 overflow-hidden border-[3px]">
+          <div class="bg-pencil-black p-8 text-white relative overflow-hidden group-hover:bg-marker-red transition-colors duration-300">
+            <Smartphone class="w-24 h-24 absolute -right-4 -bottom-4 opacity-20 rotate-12" />
+            <Smartphone class="w-12 h-12 mb-4 stroke-[2] relative z-10" />
+            <h3 class="text-3xl font-display font-bold relative z-10">移动存储同步系统</h3>
+          </div>
+          <div class="p-8">
+            <p class="font-body text-xl text-pencil-black/80 mb-8 leading-relaxed">
+              专业的移动设备存储同步解决方案，实现跨平台数据无缝同步，保障数据安全与高效传输。
+            </p>
+            <div class="flex flex-wrap gap-3 mb-8">
+              <span class="font-body px-3 py-1 border-2 border-pencil-black rounded-full text-sm font-bold bg-white shadow-[2px_2px_0px_0px_#2d2d2d] -rotate-2">跨平台同步</span>
+              <span class="font-body px-3 py-1 border-2 border-pencil-black rounded-full text-sm font-bold bg-white shadow-[2px_2px_0px_0px_#2d2d2d] rotate-1">实时备份</span>
+              <span class="font-body px-3 py-1 border-2 border-pencil-black rounded-full text-sm font-bold bg-white shadow-[2px_2px_0px_0px_#2d2d2d] -rotate-1">数据加密</span>
+            </div>
+            <a href="/products/mobile-sync" class="inline-flex items-center text-xl font-bold font-display hover:text-marker-red hover:translate-x-2 transition-all">
+              了解详情 <ArrowRight class="ml-2 w-5 h-5 stroke-[3]" />
+            </a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card bg-white group hover:-rotate-1 p-0 overflow-hidden border-[3px] md:mt-12">
+          <div class="bg-pencil-black p-8 text-white relative overflow-hidden group-hover:bg-pen-blue transition-colors duration-300">
+            <Eye class="w-24 h-24 absolute -right-4 -bottom-4 opacity-20 rotate-12" />
+            <Eye class="w-12 h-12 mb-4 stroke-[2] relative z-10" />
+            <h3 class="text-3xl font-display font-bold relative z-10">眼动新闻实验平台</h3>
+          </div>
+          <div class="p-8">
+            <p class="font-body text-xl text-pencil-black/80 mb-8 leading-relaxed">
+              基于先进眼动追踪技术的新闻阅读研究平台，为新闻媒体、学术研究和用户体验优化提供科学的数据支撑。
+            </p>
+            <div class="flex flex-wrap gap-3 mb-8">
+              <span class="font-body px-3 py-1 border-2 border-pencil-black rounded-full text-sm font-bold bg-white shadow-[2px_2px_0px_0px_#2d2d2d] rotate-2">眼动追踪</span>
+              <span class="font-body px-3 py-1 border-2 border-pencil-black rounded-full text-sm font-bold bg-white shadow-[2px_2px_0px_0px_#2d2d2d] -rotate-1">数据分析</span>
+              <span class="font-body px-3 py-1 border-2 border-pencil-black rounded-full text-sm font-bold bg-white shadow-[2px_2px_0px_0px_#2d2d2d] rotate-1">可视化报告</span>
+            </div>
+            <a href="/products/eye-tracking" class="inline-flex items-center text-xl font-bold font-display hover:text-pen-blue hover:translate-x-2 transition-all">
+              了解详情 <ArrowRight class="ml-2 w-5 h-5 stroke-[3]" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-32 relative">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row justify-between items-start mb-20">
+        <h2 class="text-5xl md:text-6xl font-display font-bold mb-6 md:mb-0 text-pencil-black rotate-1 drop-shadow-[3px_3px_0px_#e5e0d8]">我们的服务</h2>
+        <p class="font-body text-xl text-pencil-black/80 max-w-lg leading-relaxed bg-white p-6 border-2 border-pencil-black shadow-sketch -rotate-1 rounded-[255px_15px_225px_15px/15px_225px_15px_255px]">
+          提供专业的软件开发和技术服务，助力企业实现数字化转型。
+        </p>
+      </div>
+
+      <div class="space-y-8">
+        <!-- Service 1 -->
+        <div class="wobbly-box p-8 bg-white hover:bg-sticky-yellow transition-colors duration-200 group flex flex-col md:flex-row gap-8 items-start hover:-rotate-1 shadow-sm">
+          <div class="text-4xl font-display font-bold text-pencil-black/20 group-hover:text-pencil-black/40">01</div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-display font-bold mb-4 group-hover:translate-x-2 transition-transform">软件开发服务</h3>
+            <p class="font-body text-xl text-pencil-black/80 leading-relaxed">
+              提供专业的软件开发服务，包括 Web 应用、移动应用、桌面应用等多平台软件解决方案，满足企业个性化需求。
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="wobbly-box p-8 bg-white hover:bg-blue-50 transition-colors duration-200 group flex flex-col md:flex-row gap-8 items-start hover:rotate-1 shadow-sm md:ml-12">
+          <div class="text-4xl font-display font-bold text-pencil-black/20 group-hover:text-pencil-black/40">02</div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-display font-bold mb-4 group-hover:translate-x-2 transition-transform">技术咨询与服务</h3>
+            <p class="font-body text-xl text-pencil-black/80 leading-relaxed">
+              技术服务、技术开发、技术咨询、技术交流、技术转让、技术推广等全方位技术支持，助力企业技术升级。
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="wobbly-box p-8 bg-white hover:bg-red-50 transition-colors duration-200 group flex flex-col md:flex-row gap-8 items-start hover:-rotate-1 shadow-sm md:ml-24">
+          <div class="text-4xl font-display font-bold text-pencil-black/20 group-hover:text-pencil-black/40">03</div>
+          <div class="flex-1">
+            <h3 class="text-3xl font-display font-bold mb-4 group-hover:translate-x-2 transition-transform">人工智能基础软件</h3>
+            <p class="font-body text-xl text-pencil-black/80 leading-relaxed">
+              专注于人工智能基础软件开发，为企业提供智能化解决方案，推动传统业务向智能化转型。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactSection />
+  <Footer />
+</Layout>

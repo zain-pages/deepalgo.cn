@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  /* Typography - Hand Drawn */
+  --font-display: "Kalam", cursive;
+  --font-body: "Patrick Hand", cursive;
+
+  /* Colors - Warm Paper */
+  --color-paper: #fdfbf7;
+  --color-pencil-black: #2d2d2d;
+  --color-pencil-gray: #e5e0d8;
+  --color-marker-red: #ff4d4d;
+  --color-pen-blue: #2d5da1;
+  --color-sticky-yellow: #fff9c4;
+
+  /* Shadows - Hard Offset */
+  --shadow-sketch: 4px 4px 0px 0px #2d2d2d;
+  --shadow-sketch-lg: 8px 8px 0px 0px #2d2d2d;
+  --shadow-sketch-sm: 2px 2px 0px 0px #2d2d2d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-body);
+    color: var(--color-pencil-black);
+    background-color: var(--color-paper);
+    background-image: radial-gradient(var(--color-pencil-gray) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    line-height: 1.2;
+  }
+
+  body {
+    @apply antialiased selection:bg-marker-red selection:text-white;
+  }
+}
+
+/* Custom utilities */
+@utility container-custom {
+  @apply max-w-5xl mx-auto px-6 md:px-8;
+}
+
+@utility btn-primary {
+  @apply bg-white text-pencil-black border-[3px] border-pencil-black px-8 py-3
+         text-xl shadow-sketch rounded-[255px_15px_225px_15px/15px_225px_15px_255px]
+         hover:bg-marker-red hover:text-white hover:shadow-sketch-sm hover:translate-x-[2px] hover:translate-y-[2px]
+         active:translate-x-[4px] active:translate-y-[4px] active:shadow-none
+         transition-all duration-100 cursor-pointer inline-flex items-center justify-center
+         no-underline min-w-[160px];
+}
+
+@utility btn-secondary {
+  @apply bg-pencil-gray text-pencil-black border-[3px] border-pencil-black px-8 py-3
+         text-xl shadow-sketch rounded-[255px_15px_225px_15px/15px_225px_15px_255px]
+         hover:bg-pen-blue hover:text-white hover:shadow-sketch-sm hover:translate-x-[2px] hover:translate-y-[2px]
+         active:translate-x-[4px] active:translate-y-[4px] active:shadow-none
+         transition-all duration-100 cursor-pointer inline-flex items-center justify-center
+         no-underline min-w-[160px];
+}
+
+@utility card {
+  @apply bg-white border-2 border-pencil-black p-8
+         rounded-[255px_15px_225px_15px/15px_225px_15px_255px]
+         shadow-[3px_3px_0px_0px_rgba(45,45,45,0.1)]
+         transition-all duration-100;
+}
+
+@utility section-title {
+  @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 md:mb-8 text-pencil-black -rotate-1;
+}
+
+@utility section-subtitle {
+  @apply font-body text-xl md:text-2xl text-pencil-black/70 mb-16 max-w-3xl leading-relaxed;
+}
+
+@utility wobbly-box {
+  @apply border-2 border-pencil-black rounded-[255px_15px_225px_15px/15px_225px_15px_255px];
+}
+
+@utility link-scribble {
+  @apply relative decoration-wavy decoration-2 hover:text-marker-red hover:decoration-marker-red transition-colors;
+}

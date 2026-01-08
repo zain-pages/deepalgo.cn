@@ -1,0 +1,52 @@
+---
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { name: '首页', href: '/' },
+  { name: '关于我们', href: '/#about' },
+  { name: '服务', href: '/#services' },
+  { name: '产品', href: '/#products' },
+  { name: '联系我们', href: '/#contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-paper/95 backdrop-blur-sm border-b-[3px] border-pencil-black">
+  <nav class="container-custom">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3 hover:-rotate-2 transition-transform duration-200 group">
+        <div class="w-10 h-10 border-2 border-pencil-black rounded-full flex items-center justify-center bg-white shadow-[2px_2px_0px_0px_#2d2d2d] group-hover:shadow-none group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all overflow-hidden p-1">
+          <img src="/logo.png" alt="深算科技 Logo" class="w-full h-full object-contain" />
+        </div>
+        <span class="text-2xl font-display font-bold text-pencil-black">深算科技</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="hidden md:flex items-center space-x-8">
+        {navItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={[
+                "font-body text-xl hover:text-marker-red hover:rotate-2 transition-all inline-block",
+                currentPath === item.href ? "font-bold text-marker-red decoration-wavy underline decoration-2 underline-offset-4" : "text-pencil-black"
+              ]}
+            >
+              {item.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden p-2 text-pencil-black border-2 border-pencil-black rounded-lg hover:bg-pencil-gray transition-colors">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Spacer for fixed header -->
+<div class="h-20"></div>

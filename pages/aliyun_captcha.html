@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="data-spm" content="5176"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+        <script>
+            window.AliyunCaptchaConfig = {
+                region: 'cn',
+                prefix: 'o7qnre',
+            };
+        </script>
+        <script type="text/javascript" src="https://o.alicdn.com/captcha-frontend/aliyunCaptcha/AliyunCaptcha.js"></script>
+        <script src="https://appx/web-view.min.js"></script>
+
+    </head>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #captcha-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #f5f5f5;
+        }
+
+        #captcha-element {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+    <body>
+        <div id="captcha-container">
+            <div id="captcha-element"></div>
+            <div id="captcha-button"></div>
+        </div>
+
+        <script type="text/javascript">
+            var captcha;
+
+            function initCaptcha() {
+                window.initAliyunCaptcha({
+                    SceneId: 'fh84u2op',
+                    mode: 'embed',
+                    element: '#captcha-element',
+                    button: '#captcha-button',
+                    success: success,
+                    fail: fail,
+                    getInstance: getInstance,
+                    slideStyle: {
+                        width: 360,
+                        height: 40,
+                    },
+                    language: 'cn',
+                    timeout: 5000,
+                });  
+            }
+
+            initCaptcha();
+
+            function getInstance(instance) {
+                console.log(instance)
+                captcha = instance;
+            }
+
+            function success(captchaVerifyParam) {
+                console.log(captchaVerifyParam);
+                // 通知小程序二次校验参数captchaVerifyParam
+                my.postMessage({ data: captchaVerifyParam });
+                my.navigateBack();
+            }
+
+            function fail(err) {
+                console.error(err);
+            }
+        </script>
+    </body>
+</html>

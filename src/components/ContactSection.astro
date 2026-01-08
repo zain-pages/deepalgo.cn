@@ -1,0 +1,46 @@
+---
+import { Mail, MessageSquare } from 'lucide-astro';
+
+const email = 'info@deepalgo.cn';
+const wechat = 'shensuantech';
+---
+
+<section id="contact" class="py-24 bg-paper relative overflow-hidden">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 pattern-grid opacity-30 pointer-events-none"></div>
+
+  <div class="container-custom relative z-10">
+    <div class="text-center mb-16">
+      <h2 class="section-title inline-block border-b-[3px] border-marker-red pb-2 px-4 rotate-1">联系我们</h2>
+      <p class="section-subtitle mx-auto mt-6">欢迎与我们联系，专业团队将为您提供优质服务</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      <!-- Email -->
+      <div class="card group hover:-rotate-1 hover:border-marker-red transition-all duration-300">
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="w-16 h-16 rounded-full border-[3px] border-pencil-black flex items-center justify-center mb-6 bg-marker-red/10 group-hover:bg-marker-red/20 transition-colors">
+            <Mail class="w-8 h-8 stroke-[2.5] text-pencil-black" />
+          </div>
+          <h3 class="font-display font-bold text-2xl mb-2">邮箱联系</h3>
+          <a href={`mailto:${email}`} class="font-body text-xl text-pencil-black hover:text-marker-red decoration-wavy underline decoration-2 underline-offset-4 transition-colors mb-2">
+            {email}
+          </a>
+          <p class="font-body text-pencil-black/60 bg-yellow-100 px-3 py-1 -rotate-1 shadow-sm border border-pencil-black/20 rounded-sm">24小时内回复</p>
+        </div>
+      </div>
+
+      <!-- WeChat -->
+      <div class="card group hover:rotate-1 hover:border-pen-blue transition-all duration-300">
+        <div class="flex flex-col items-center text-center p-4">
+          <div class="w-16 h-16 rounded-full border-[3px] border-pencil-black flex items-center justify-center mb-6 bg-pen-blue/10 group-hover:bg-pen-blue/20 transition-colors">
+            <MessageSquare class="w-8 h-8 stroke-[2.5] text-pencil-black" />
+          </div>
+          <h3 class="font-display font-bold text-2xl mb-2">微信联系</h3>
+          <p class="font-body text-xl text-pencil-black mb-2 select-all cursor-text bg-white px-2 rounded">{wechat}</p>
+          <p class="font-body text-pencil-black/60 bg-blue-100 px-3 py-1 rotate-1 shadow-sm border border-pencil-black/20 rounded-sm">快速技术咨询服务</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

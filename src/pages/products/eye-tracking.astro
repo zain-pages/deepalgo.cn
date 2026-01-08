@@ -1,0 +1,155 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { Eye, Target, BarChart, Lock, Globe, Zap, ArrowRight } from 'lucide-astro';
+---
+
+<Layout title="眼动新闻阅读实验平台 - 长沙深算科技有限公司">
+  <Header />
+
+  <main class="overflow-hidden">
+    <!-- Hero Section -->
+    <section class="min-h-[85vh] flex flex-col justify-center relative bg-paper overflow-hidden">
+      <div class="absolute inset-0 pattern-grid opacity-50 pointer-events-none"></div>
+      
+      <!-- Decorative scribbles -->
+      <div class="absolute top-20 right-[10%] w-32 h-32 border-[3px] border-pencil-black rounded-full opacity-10 blur-sm rotate-12 hidden md:block"></div>
+
+      <div class="container-custom relative z-10 py-24 md:py-32">
+        <div class="mb-12 border-l-[6px] border-pencil-black pl-8 ml-4 rotate-1">
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-none text-pencil-black mb-6 drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+            眼动<br/>新闻平台
+          </h1>
+        </div>
+        
+        <div class="bg-white/80 backdrop-blur-sm p-6 border-2 border-pencil-black rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-sketch max-w-2xl mb-12 -rotate-1 hover:rotate-0 transition-transform duration-300">
+          <p class="font-body text-xl md:text-2xl text-pencil-black leading-relaxed">
+            基于前置摄像头的用户行为追踪技术，深度洞察新闻阅读行为，为A/B测试和推荐算法优化提供科学依据。
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-6 pl-4">
+          <a href="mailto:info@deepalgo.cn?subject=眼动新闻平台咨询" class="btn-primary group rotate-1">
+            立即咨询 <ArrowRight class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1 stroke-[3]" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-32 relative">
+      <div class="container-custom">
+        <div class="mb-16">
+          <h2 class="section-title border-l-[6px] border-marker-red pl-4 ml-2">产品特色</h2>
+          <p class="section-subtitle">革命性的眼动追踪技术，让用户行为分析更加精准和全面。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Feature 1 -->
+          <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d]">
+            <Eye class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">精准眼动追踪</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              基于前置摄像头的眼动行为追踪，20次/秒的记录频率，达到词汇阅读级别的精确度。
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1] md:mt-8">
+            <Target class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">智能A/B测试</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              内置A/B测试系统，支持推荐算法对比、社群信息显示对比等多维度实验设计。
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d]">
+            <BarChart class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">实时数据反馈</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              支持注视反馈模式，实时显示用户注视位置，提供分词级别的注视行为分析。
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1]">
+            <Lock class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">邀请码管理</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              完善的用户管理系统，支持邀请码发放、使用记录追踪，确保实验的严谨性。
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d] md:mt-8">
+            <Globe class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">跨平台兼容</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              兼容最新版Chrome浏览器，支持Mac、Windows桌面端，无需额外硬件设备。
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1]">
+            <Zap class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">高性能架构</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              支持10万用户同时在线，QPS 100+的高并发处理能力，确保实验数据的完整性。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Specs -->
+    <section class="py-32 bg-pencil-black text-white pattern-lines border-y-[3px] border-pencil-black">
+      <div class="container-custom">
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-white rotate-1">技术规格</h2>
+        <p class="font-body text-xl text-white/70 mb-16 max-w-3xl leading-relaxed -rotate-1">专业级的性能指标，满足大规模实验需求。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
+          
+          <div class="border-[3px] border-white/30 p-8 hover:border-white transition-colors rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:-rotate-1">
+            <p class="font-body text-sm uppercase tracking-widest text-white/60 mb-2 font-bold bg-white/10 inline-block px-2 rounded">用户容量</p>
+            <p class="font-display text-3xl font-bold">10万用户同时在线</p>
+          </div>
+
+          <div class="border-[3px] border-white/30 p-8 hover:border-white transition-colors rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:rotate-1">
+            <p class="font-body text-sm uppercase tracking-widest text-white/60 mb-2 font-bold bg-white/10 inline-block px-2 rounded">并发处理</p>
+            <p class="font-display text-3xl font-bold">QPS 100+</p>
+          </div>
+
+          <div class="border-[3px] border-white/30 p-8 hover:border-white transition-colors rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:-rotate-1">
+            <p class="font-body text-sm uppercase tracking-widest text-white/60 mb-2 font-bold bg-white/10 inline-block px-2 rounded">眼动精度</p>
+            <p class="font-display text-3xl font-bold">20次/秒，词汇级</p>
+          </div>
+
+          <div class="border-[3px] border-white/30 p-8 hover:border-white transition-colors rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:rotate-1">
+            <p class="font-body text-sm uppercase tracking-widest text-white/60 mb-2 font-bold bg-white/10 inline-block px-2 rounded">实验周期</p>
+            <p class="font-display text-3xl font-bold">连续1个月</p>
+          </div>
+
+          <div class="border-[3px] border-white/30 p-8 hover:border-white transition-colors rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:-rotate-1">
+            <p class="font-body text-sm uppercase tracking-widest text-white/60 mb-2 font-bold bg-white/10 inline-block px-2 rounded">浏览器支持</p>
+            <p class="font-display text-3xl font-bold">Chrome 最新版</p>
+          </div>
+
+          <div class="border-[3px] border-white/30 p-8 hover:border-white transition-colors rounded-[255px_15px_225px_15px/15px_225px_15px_255px] hover:rotate-1">
+            <p class="font-body text-sm uppercase tracking-widest text-white/60 mb-2 font-bold bg-white/10 inline-block px-2 rounded">操作系统</p>
+            <p class="font-display text-3xl font-bold">Mac / Windows</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <ContactSection />
+  </main>
+
+  <Footer />
+</Layout>

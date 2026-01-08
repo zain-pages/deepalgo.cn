@@ -1,0 +1,124 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/Header.astro';
+import Footer from '../../components/Footer.astro';
+import ContactSection from '../../components/ContactSection.astro';
+import { Lock, Smartphone, Zap, Shield, RefreshCw, Globe, ArrowRight } from 'lucide-astro';
+---
+
+<Layout title="移动存储同步系统 - 长沙深算科技有限公司">
+  <Header />
+
+  <main class="overflow-hidden">
+    <!-- Hero Section -->
+    <section class="min-h-[85vh] flex flex-col justify-center relative bg-paper overflow-hidden">
+      <div class="absolute inset-0 pattern-grid opacity-50 pointer-events-none"></div>
+      
+      <!-- Decorative scribbles -->
+      <div class="absolute top-20 right-[10%] w-32 h-32 border-[3px] border-pencil-black rounded-full opacity-10 blur-sm rotate-12 hidden md:block"></div>
+
+      <div class="container-custom relative z-10 py-24 md:py-32">
+        <div class="mb-12 border-l-[6px] border-pencil-black pl-8 ml-4 rotate-1">
+          <h1 class="text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-none text-pencil-black mb-6 drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
+            移动存储<br/>同步系统
+          </h1>
+        </div>
+        
+        <div class="bg-white/80 backdrop-blur-sm p-6 border-2 border-pencil-black rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-sketch max-w-2xl mb-12 -rotate-1 hover:rotate-0 transition-transform duration-300">
+          <p class="font-body text-xl md:text-2xl text-pencil-black leading-relaxed">
+            革命性的文件同步解决方案，以手机为桥梁，连接您的办公室与家庭。
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-6 pl-4">
+          <a href="mailto:info@deepalgo.cn?subject=移动存储同步系统咨询" class="btn-primary group rotate-1">
+            立即咨询 <ArrowRight class="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1 stroke-[3]" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="py-32 relative">
+      <div class="container-custom">
+        <div class="mb-16">
+          <h2 class="section-title border-l-[6px] border-marker-red pl-4 ml-2">产品核心优势</h2>
+          <p class="section-subtitle">安全、便捷、零成本的文件同步体验。</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Feature 1 -->
+          <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d]">
+            <Lock class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">隐私保护</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              避免互联网网盘的隐私泄露风险，您的数据完全掌控在自己手中，采用动态秘密技术确保传输和存储安全。
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1] md:mt-8">
+            <Smartphone class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">零成本投入</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              充分利用手机已有的10-20GB存储空间作为同步媒介，无需购买额外的硬件设备或云存储服务。
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d]">
+            <Zap class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">智能同步</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              基于时间戳的同步策略确保文件版本一致性，支持增量同步技术，大幅提高同步效率。
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1]">
+            <Shield class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">安全加密</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              集成先进的动态秘密技术，为数据传输和存储提供军用级安全保障。
+            </p>
+          </div>
+
+          <!-- Feature 5 -->
+          <div class="card group hover:-rotate-1 hover:border-marker-red hover:shadow-[4px_4px_0px_0px_#ff4d4d] md:mt-8">
+            <RefreshCw class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-marker-red transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">冲突解决</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              基于哈希链的智能冲突检测和解决机制，自动处理文件版本冲突。
+            </p>
+          </div>
+
+          <!-- Feature 6 -->
+          <div class="card group hover:rotate-1 hover:border-pen-blue hover:shadow-[4px_4px_0px_0px_#2d5da1]">
+            <Globe class="w-12 h-12 mb-6 stroke-[2] text-pencil-black group-hover:text-pen-blue transition-colors" />
+            <h3 class="text-2xl font-display font-bold mb-4">跨平台支持</h3>
+            <p class="font-body text-lg text-pencil-black/80 leading-relaxed">
+              支持手机端App和电脑端客户端无缝对接，实现办公室、家庭多设备间的文件自动同步。
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-32 bg-sticky-yellow border-y-[3px] border-pencil-black pattern-lines relative">
+      <div class="container-custom text-center relative z-10">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-8 text-pencil-black rotate-1">准备好体验安全便捷的文件同步了吗？</h2>
+        <p class="font-body text-xl text-pencil-black/80 mb-12 max-w-2xl mx-auto -rotate-1">
+          立即联系我们，获取专业的解决方案和详细报价信息
+        </p>
+        <a href="mailto:info@deepalgo.cn?subject=移动存储同步系统咨询" class="btn-primary rotate-1">
+          立即咨询
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

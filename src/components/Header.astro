@@ -1,7 +1,5 @@
 ---
-const currentPath = Astro.url.pathname;
-
-const navItems = [
+const navigation = [
   { name: '首页', href: '/' },
   { name: '关于我们', href: '/#about' },
   { name: '服务', href: '/#services' },
@@ -10,27 +8,27 @@ const navItems = [
 ];
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-paper/95 backdrop-blur-sm border-b-[3px] border-pencil-black">
-  <nav class="container-custom">
-    <div class="flex items-center justify-between h-20">
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3 hover:-rotate-2 transition-transform duration-200 group">
-        <div class="w-10 h-10 border-2 border-pencil-black rounded-full flex items-center justify-center bg-white shadow-[2px_2px_0px_0px_#2d2d2d] group-hover:shadow-none group-hover:translate-x-[2px] group-hover:translate-y-[2px] transition-all overflow-hidden p-1">
-          <img src="/logo.png" alt="深算科技 Logo" class="w-full h-full object-contain" />
-        </div>
-        <span class="text-2xl font-display font-bold text-pencil-black">深算科技</span>
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 transition-all duration-200">
+  <nav class="section-container">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo with Gradient -->
+      <a
+        href="/"
+        class="relative group"
+      >
+        <span class="text-2xl font-extrabold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent hover:opacity-90 transition-opacity" style="--tw-gradient-from: #486581; --tw-gradient-to: #2d3748;">
+          深算科技
+        </span>
+        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-600 to-secondary-600 group-hover:w-full transition-all duration-300" style="--tw-gradient-from: #486581; --tw-gradient-to: #2d3748;"></span>
       </a>
 
       <!-- Desktop Navigation -->
-      <ul class="hidden md:flex items-center space-x-8">
-        {navItems.map((item) => (
+      <ul class="hidden md:flex items-center space-x-1">
+        {navigation.map((item) => (
           <li>
             <a
               href={item.href}
-              class:list={[
-                "font-body text-xl hover:text-marker-red hover:rotate-2 transition-all inline-block",
-                currentPath === item.href ? "font-bold text-marker-red decoration-wavy underline decoration-2 underline-offset-4" : "text-pencil-black"
-              ]}
+              class="relative px-4 py-2 text-slate-600 hover:text-primary-600 font-medium text-sm rounded-lg transition-all duration-200 hover:bg-primary-50 focus-ring"
             >
               {item.name}
             </a>
@@ -39,9 +37,17 @@ const navItems = [
       </ul>
 
       <!-- Mobile Menu Button -->
-      <button class="md:hidden p-2 text-pencil-black border-2 border-pencil-black rounded-lg hover:bg-pencil-gray transition-colors">
+      <button
+        class="md:hidden p-2.5 text-slate-600 hover:text-primary-600 hover:bg-primary-50 rounded-xl transition-all duration-200 focus-ring"
+        aria-label="打开菜单"
+      >
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
         </svg>
       </button>
     </div>
@@ -49,4 +55,4 @@ const navItems = [
 </header>
 
 <!-- Spacer for fixed header -->
-<div class="h-20"></div>
+<div class="h-16"></div>

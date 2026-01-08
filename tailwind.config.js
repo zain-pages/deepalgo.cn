@@ -4,29 +4,57 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 主色调：简洁蓝色
+        // 主色调：墨蓝色 Ink Blue
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9', // 主色
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#829ab1',
+          500: '#627d98',
+          600: '#486581', // 主色
+          700: '#334e68',
+          800: '#243b53',
+          900: '#102a43',
+          950: '#061726',
+        },
+        // 辅色：深蓝色 Deep Blue
+        secondary: {
+          50: '#edf2f7',
+          100: '#e2e8f0',
+          200: '#cbd5e0',
+          300: '#a0aec0',
+          400: '#718096',
+          500: '#4a5568',
+          600: '#2d3748',
+          700: '#1a202c',
+          800: '#171923',
+          900: '#0d1117',
+          950: '#000000',
+        },
+        // 中性色 Slate
+        slate: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617',
         },
       },
       fontFamily: {
         sans: [
-          'Microsoft YaHei',
-          'PingFang SC',
+          'Plus Jakarta Sans',
+          'system-ui',
           '-apple-system',
           'BlinkMacSystemFont',
           'Segoe UI',
-          'Helvetica Neue',
-          'Arial',
+          'Roboto',
           'sans-serif',
         ],
       },
@@ -40,31 +68,28 @@ export default {
         '3xl': ['1.875rem', { lineHeight: '2.25rem' }],
         '4xl': ['2.25rem', { lineHeight: '2.5rem' }],
         '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
-        '7xl': ['4.5rem', { lineHeight: '1' }],
+        '6xl': ['3.75rem', { lineHeight: '1.1' }],
+        '7xl': ['4.5rem', { lineHeight: '1.1' }],
         '8xl': ['6rem', { lineHeight: '1' }],
         '9xl': ['8rem', { lineHeight: '1' }],
       },
-      spacing: {
-        '128': '32rem',
-        '144': '36rem',
-      },
-      borderRadius: {
-        '4xl': '2rem',
-        '5xl': '2.5rem',
+      boxShadow: {
+        // 墨蓝色彩色阴影系统
+        'soft': '0 4px 20px -2px rgba(72, 101, 129, 0.1)',
+        'soft-lg': '0 10px 25px -5px rgba(72, 101, 129, 0.15), 0 8px 10px -6px rgba(72, 101, 129, 0.1)',
+        'glow': '0 0 20px rgba(72, 101, 129, 0.5)',
+        'button': '0 4px 14px 0 rgba(72, 101, 129, 0.3)',
+        'colored': '0 10px 40px -10px rgba(72, 101, 129, 0.3)',
       },
       backgroundImage: {
-        'gradient-hero': 'linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%)',
-      },
-      boxShadow: {
-        'sm': '0 1px 3px rgba(0, 0, 0, 0.05)',
-        'md': '0 4px 6px rgba(0, 0, 0, 0.07)',
-        'lg': '0 10px 15px rgba(0, 0, 0, 0.1)',
-        'xl': '0 20px 25px rgba(0, 0, 0, 0.1)',
+        'gradient-primary': 'linear-gradient(135deg, #486581 0%, #2d3748 100%)',
+        'gradient-hero': 'linear-gradient(135deg, #f0f4f8 0%, #edf2f7 100%)',
+        'gradient-dark': 'linear-gradient(135deg, #102a43 0%, #0d1117 100%)',
       },
       animation: {
         'fade-in-up': 'fadeInUp 0.6s ease-out',
         'float': 'float 6s ease-in-out infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -72,9 +97,18 @@ export default {
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         float: {
-          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-          '50%': { transform: 'translateY(-20px) rotate(180deg)' },
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
         },
+      },
+      spacing: {
+        '128': '32rem',
+        '144': '36rem',
+      },
+      borderRadius: {
+        'xl': '0.75rem', // 12px for cards
+        '2xl': '1rem',   // 16px
+        '3xl': '1.5rem', // 24px
       },
     },
   },

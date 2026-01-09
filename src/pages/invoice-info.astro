@@ -8,69 +8,71 @@ import { Copy, Check } from 'lucide-astro';
 <Layout title="发票信息 - 长沙深算科技有限公司">
   <Header />
 
-  <main class="min-h-screen py-20 bg-paper">
-    <div class="absolute inset-0 pattern-grid opacity-30 pointer-events-none"></div>
+  <main class="min-h-screen py-20 relative">
+    <!-- Background Gradient Blob -->
+    <div class="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-primary-200/30 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-secondary-200/30 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="container-custom relative z-10">
+    <div class="section-container relative z-10">
       <div class="max-w-3xl mx-auto">
         <div class="mb-12 text-center">
-          <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 rotate-1 text-pencil-black">发票信息</h1>
-          <p class="font-body text-xl text-pencil-black/70 -rotate-1">开票时请使用以下信息</p>
+          <h1 class="section-title-gradient">发票信息</h1>
+          <p class="section-subtitle mx-auto">开票时请使用以下信息</p>
         </div>
 
-        <div class="card bg-white p-8 md:p-12 border-[3px] border-pencil-black rounded-[255px_15px_225px_15px/15px_225px_15px_255px] shadow-sketch transform -rotate-1 hover:rotate-0 transition-transform duration-300">
+        <div class="card max-w-3xl mx-auto hover:shadow-soft-lg transition-all duration-300">
           <div class="space-y-8">
             <!-- Company Name -->
             <div class="group">
               <div class="flex items-center justify-between mb-2">
-                <p class="font-body text-sm uppercase tracking-widest text-pencil-black/60 font-bold">公司名称</p>
+                <p class="text-sm font-semibold tracking-wide text-slate-500 uppercase">公司名称</p>
                 <button
-                  class="copy-btn flex items-center space-x-2 text-sm font-bold uppercase tracking-wider hover:text-marker-red transition-colors font-body"
+                  class="copy-btn group/btn flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
                   data-text="长沙深算科技有限公司"
                 >
                   <span class="btn-text">复制</span>
-                  <Copy class="w-4 h-4 icon-copy" />
-                  <Check class="w-4 h-4 icon-check hidden text-green-600" />
+                  <Copy class="w-4 h-4 group-hover/btn:scale-110 transition-transform icon-copy" />
+                  <Check class="w-4 h-4 text-green-500 hidden icon-check" />
                 </button>
               </div>
-              <p class="font-display text-2xl md:text-3xl font-bold border-b-2 border-pencil-black pb-2 select-all text-pencil-black">长沙深算科技有限公司</p>
+              <p class="text-2xl md:text-3xl font-bold text-slate-900 border-b border-slate-100 pb-4 select-all">长沙深算科技有限公司</p>
             </div>
 
             <!-- Tax Number -->
             <div class="group">
               <div class="flex items-center justify-between mb-2">
-                <p class="font-body text-sm uppercase tracking-widest text-pencil-black/60 font-bold">税号</p>
+                <p class="text-sm font-semibold tracking-wide text-slate-500 uppercase">税号</p>
                 <button
-                  class="copy-btn flex items-center space-x-2 text-sm font-bold uppercase tracking-wider hover:text-marker-red transition-colors font-body"
+                  class="copy-btn group/btn flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
                   data-text="91430104MAEQDMP22Q"
                 >
                   <span class="btn-text">复制</span>
-                  <Copy class="w-4 h-4 icon-copy" />
-                  <Check class="w-4 h-4 icon-check hidden text-green-600" />
+                  <Copy class="w-4 h-4 group-hover/btn:scale-110 transition-transform icon-copy" />
+                  <Check class="w-4 h-4 text-green-500 hidden icon-check" />
                 </button>
               </div>
-              <p class="font-display text-2xl md:text-3xl font-bold border-b-2 border-pencil-black pb-2 select-all text-pencil-black">91430104MAEQDMP22Q</p>
+              <p class="text-2xl md:text-3xl font-bold text-slate-900 border-b border-slate-100 pb-4 select-all font-mono tracking-tight">91430104MAEQDMP22Q</p>
             </div>
 
             <!-- Email -->
             <div class="group">
               <div class="flex items-center justify-between mb-2">
-                <p class="font-body text-sm uppercase tracking-widest text-pencil-black/60 font-bold">发送邮箱</p>
+                <p class="text-sm font-semibold tracking-wide text-slate-500 uppercase">发送邮箱</p>
                 <button
-                  class="copy-btn flex items-center space-x-2 text-sm font-bold uppercase tracking-wider hover:text-marker-red transition-colors font-body"
+                  class="copy-btn group/btn flex items-center gap-2 text-sm font-semibold text-primary-600 hover:text-primary-700 transition-colors"
                   data-text="15116181620@163.com"
                 >
                   <span class="btn-text">复制</span>
-                  <Copy class="w-4 h-4 icon-copy" />
-                  <Check class="w-4 h-4 icon-check hidden text-green-600" />
+                  <Copy class="w-4 h-4 group-hover/btn:scale-110 transition-transform icon-copy" />
+                  <Check class="w-4 h-4 text-green-500 hidden icon-check" />
                 </button>
               </div>
-              <p class="font-display text-2xl md:text-3xl font-bold border-b-2 border-pencil-black pb-2 select-all text-pencil-black">15116181620@163.com</p>
+              <p class="text-2xl md:text-3xl font-bold text-slate-900 border-b border-slate-100 pb-4 select-all">15116181620@163.com</p>
             </div>
           </div>
 
-          <div class="mt-12 pt-8 border-t-2 border-dashed border-pencil-black/20 text-center">
-            <p class="font-body text-lg text-pencil-black/60 italic">
+          <div class="mt-12 pt-8 border-t border-slate-100 text-center">
+            <p class="text-base text-slate-500 italic">
               请妥善保存此信息，开票时提供给财务人员
             </p>
           </div>
